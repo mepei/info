@@ -4,14 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mePei - Home</title>
-    
-    <!-- เพิ่ม Favicon -->
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon"> <!-- ปรับให้เป็นลิงค์ที่ถูกต้อง -->
-
-    <!-- เชื่อม Google Fonts ฟอนต์ Kanit -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
-        /* ตั้งค่าให้หน้าเว็บเต็มหน้าจอ */
         body {
             margin: 0;
             padding: 0;
@@ -28,7 +23,7 @@
             flex-direction: column;
         }
 
-        /* โลโก้วงกลม */
+        /* โลโก้ */
         .logo {
             width: 150px;
             height: 150px;
@@ -51,7 +46,7 @@
             color: #ccc;
             margin-top: 5px;
             font-weight: 300;
-            line-height: 0.0;
+            line-height: 1.4;
         }
 
         /* เมนูโซเชียล */
@@ -74,7 +69,7 @@
             object-fit: contain;
         }
 
-        /* ปุ่มที่ลิ้งค์ไปยังหน้าอื่น */
+        /* ปุ่มลิ้งค์ไปยังหน้าอื่น */
         .buttons {
             margin-top: 10px;
         }
@@ -96,6 +91,7 @@
             background-color: rgba(122, 122, 122, 0.7);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
             text-shadow: 0 0 6px #ffffff, 0 0 12px #ffffff, 0 0 18px #ffffff;
+            color: #fff;
         }
 
         /* Footer */
@@ -104,13 +100,61 @@
             padding: 10px 0;
             position: absolute;
             bottom: 0;
-            background-color: rgba(0, 0, 0, 0.7);
+            background-color: rgba(0, 0, 0, 0.85);
             color: #fff;
             font-size: 14px;
             text-align: center;
         }
+
+        /* ปรับขนาดและการจัดเรียงสำหรับหน้าจอมือถือ */
+        @media (max-width: 768px) {
+            /* โลโก้ */
+            .logo {
+                width: 120px;
+                height: 120px;
+            }
+
+            /* ข้อความ Bio */
+            .bio {
+                font-size: 14px;
+            }
+
+            /* ปรับปุ่มให้มีขนาดเหมาะสม */
+            .buttons a {
+                font-size: 16px;
+                padding: 10px 20px;
+            }
+
+            /* เมนูโซเชียล */
+            .social-icons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .social-icons a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        /* ปรับขนาดสำหรับหน้าจอที่เล็กลงมาก (โทรศัพท์) */
+        @media (max-width: 480px) {
+            .logo {
+                width: 100px;
+                height: 100px;
+            }
+
+            .bio {
+                font-size: 12px;
+            }
+
+            .buttons a {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
+        }
     </style>
-    <!-- JavaScript ป้องกันการคลิกขวา -->
+
     <script>
         document.addEventListener("contextmenu", function(e) {
             e.preventDefault();
@@ -118,34 +162,25 @@
     </script>
 </head>
 <body>
-    <!-- โลโก้ -->
     <div class="logo">
         <img src="images/logo.jpg" alt="Logo">
     </div>
-
-    <!-- ข้อความ Bio -->
     <p class="bio">About me</p>
     <p class="bio">Developer | Passionate about design and technology</p>
-
-    <!-- เมนูโซเชียล -->
     <div class="social-icons">
         <a href="https://www.facebook.com/jaopey" target="_blank">
-            <img src="images/fb.png" alt="Facebook">
+            <img src="images/fb.png" alt="Facebook logo">
         </a>
         <a href="https://www.instagram.com/pei.xvi/" target="_blank">
-            <img src="images/ig.png" alt="Instagram">
+            <img src="images/ig.png" alt="Instagram logo">
         </a>
     </div>
-
-    <!-- ปุ่มลิ้งค์ไปยังหน้าอื่น -->
     <div class="buttons">
-        <a href="">Coming soon..</a>
-        <a href="">Coming soon..</a>
-        <a href="">Coming soon..</a>
+        <a href="#">Coming soon..</a>
+        <a href="#">Coming soon..</a>
+        <a href="#">Coming soon..</a>
         <a href="donate.html">สนับสนุน</a>
     </div>
-
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 MEPEI All Rights Reserved.</p>
     </footer>
